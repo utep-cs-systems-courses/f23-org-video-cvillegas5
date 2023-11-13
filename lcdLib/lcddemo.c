@@ -9,12 +9,29 @@
 f1()
 {
   for (int i = 0; i <30; i++)
-    drawPixel(i,i,COLOR_PINK);
+    drawPixel(30+i,i,COLOR_PINK);
 }
 
 f2(){
   for(int i =0; i<30; i++)
     drawPixel(i,30-i, COLOR_PINK);
+}
+
+makex(int f){
+  for (int i = 0; i < 30; i++)
+    {
+      drawPixel(f+i,f+i, COLOR_PINK);
+      drawPixel(f+i,f+(30-i), COLOR_PINK);
+    }
+}
+
+fsquare(){
+  for(int i = 0; i < 30; i++){
+    drawPixel(0,i, COLOR_PINK);
+    drawPixel(30,i, COLOR_PINK);
+    drawPixel(i,0, COLOR_PINK);
+    drawPixel(i,30, COLOR_PINK);
+  }
 }
 /** Initializes everything, clears the screen, draws "hello" and a square */
 int
@@ -30,7 +47,6 @@ main()
 
   // fillRectangle(30,30, 60, 60, COLOR_ORANGE);
 
-  f1();
-  f2();
+  makex(30);
  
 }
